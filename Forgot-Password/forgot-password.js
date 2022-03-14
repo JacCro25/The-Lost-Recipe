@@ -18,8 +18,8 @@ let useragentHash = 0
 let langHash = 0
 
 if (!(hash(cookiemap.get('Username')) == cookieHash)) {
-    window.location.replace("https://jaccro25.github.io/The-Lost-Recipe/Main-Page/recipe.html");
     alert('ID is not correct; access denied')
+    window.location.replace("https://jaccro25.github.io/The-Lost-Recipe/Main-Page/recipe.html");
 }
 
 let cookie = document.getElementById("cookie");
