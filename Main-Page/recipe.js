@@ -10,6 +10,11 @@ function hash(message) {
     return hash
 }
 
+function checkLang() {
+    console.log(navigator.languages);
+    return false
+}
+
 function forgotPas() {
     let x = (document.cookie).split('; ');
     let cookiemap = new Map();
@@ -18,23 +23,17 @@ function forgotPas() {
     }
 
     let cookieHash = 21910813593121400000;
-    let useragentHash = 0;
+    let useragentHash = 874940901808540;
     let langHash = 0;
 
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
         alert('ID is not correct; access denied');
-        window.location.replace("https://jaccro25.github.io/The-Lost-Recipe/Main-Page/recipe.html");
     }
     else if (!(hash(navigator.userAgent))){
-        
+        alert('Browser is not correct; access denied');
+    }
+    else if (checkLang()) {
+        alert('Language is not correct; access denied');
     }
 
-    let cookie = document.getElementById("cookie");
-    cookie.innerHTML = cookiemap.get('Username');
-
-    let useragent = document.getElementById("useragent");
-    useragent.innerHTML = navigator.userAgent;
-
-    let language = document.getElementById('language');
-    language.innerHTML = navigator.languages;
 }
