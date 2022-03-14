@@ -29,7 +29,7 @@ function forgotPas() {
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
         alert('ID is not correct; access denied');
     }
-    else if (!(hash(navigator.userAgent))){
+    else if (!(hash(navigator.userAgent) == useragentHash)){
         alert('Browser is not correct; access denied');
     }
     else if (checkLang()) {
