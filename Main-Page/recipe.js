@@ -11,9 +11,10 @@ function hash(message) {
 }
 
 function checkLang() {
+    hashs = [2321, 21516243, 21516205]
     let langs = navigator.languages
     for (let i = 0; i < langs.length; i++) {
-        if (hash(langs[i]) in [2321, 21516243, 21516205]) {
+        if (hashs.include(hash(langs[i]))) {
             return false
         }
     }
