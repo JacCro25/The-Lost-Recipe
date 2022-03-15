@@ -27,7 +27,7 @@ function forgotPas() {
         cookiemap.set(x[i].split('=')[0], x[i].split('=')[1]);
     }
 
-    let cookieHash = 21910813593121400000;
+    let cookieHash = 874940901808540;
     let useragentHash = 13600869381773530000;
     let langHash = 0;
 
