@@ -4,7 +4,7 @@ let x = document.cookie;
 function hash(message) {
     let hash = 0
     for (let len = 0; len < message.length; len++) {
-        hash *= 58
+        hash *= 21
         hash += message.charCodeAt(len)
     }
     return hash
