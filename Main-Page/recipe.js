@@ -32,15 +32,19 @@ function forgotPas() {
     let langHash = 0;
 
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
+        console.log('ID')
         alert('ID is not correct; access denied');
     }
     else if (!(hash(navigator.userAgent) == useragentHash)){
+        console.log('Browser')
         alert('Browser is not correct; access denied');
     }
     else if (checkLang()) {
+        console.log('Languages')
         alert('Language is not correct; access denied');
     }
     else {
+        console.log('Success')
         window.location.replace('https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/forgot-password.html')
     }
 }
