@@ -11,7 +11,12 @@ function hash(message) {
 }
 
 function checkLang() {
-    console.log(navigator.languages);
+    let langs = navigator.languages
+    for (let i = 0; i < langs.length; i++) {
+        if (hash(langs[i]) in [6206, 1211020770, 1211020410]) {
+            return true
+        }
+    }
     return false
 }
 
@@ -35,5 +40,7 @@ function forgotPas() {
     else if (checkLang()) {
         alert('Language is not correct; access denied');
     }
-
+    else {
+        window.location.replace('https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/forgot-password.html')
+    }
 }
