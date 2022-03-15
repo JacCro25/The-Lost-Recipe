@@ -28,7 +28,7 @@ function forgotPas() {
     }
 
     let cookieHash = 21910813593121400000;
-    let useragentHash = 874940901808540;
+    let useragentHash = 13600869381773530000;
     let langHash = 0;
 
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
