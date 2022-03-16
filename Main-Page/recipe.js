@@ -63,6 +63,6 @@ function forgotPas() {
         alert('Language is not correct; access denied');
     }
     else {
-        window.location.replace(getURL())
+        window.location.replace(getURL());
     }
 }
