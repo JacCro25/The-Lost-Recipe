@@ -41,7 +41,6 @@ function getURL() {
 }
 
 function forgotPas() {
-    document.getElementById("formlogin").action = getURL();
     let x = (document.cookie).split('; ');
     let cookiemap = new Map();
     for (let i = 0; i < x.length; i++) {
@@ -67,9 +66,11 @@ function forgotPas() {
         return false;
     }
     else {
+        document.getElementById("formlogin").action = getURL();
         console.log('Success')
         console.log(getURL())
     }
     console.log('ended')
+    alert('Pause')
     return true;
 }
