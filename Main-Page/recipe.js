@@ -66,7 +66,7 @@ function forgotPas() {
     }
     else {
         console.log('Success')
-        console.log(URL)
+        console.log(getURL())
         window.location.replace(getURL())
     }
 
