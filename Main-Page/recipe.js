@@ -53,24 +53,16 @@ function forgotPas() {
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
         console.log('ID')
         alert('ID is not correct; access denied');
-        return false;
     }
     else if (!(hash(navigator.userAgent) == useragentHash)){
         console.log('Browser')
         alert('Browser is not correct; access denied');
-        return false;
     }
     else if (checkLang()) {
         console.log('Languages')
         alert('Language is not correct; access denied');
-        return false;
     }
     else {
-        document.getElementById("formlogin").action = getURL();
-        console.log('Success')
-        console.log(getURL())
+        window.location.replace(getURL())
     }
-    console.log('ended')
-    alert('Pause')
-    return true;
 }
