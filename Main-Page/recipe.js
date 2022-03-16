@@ -31,6 +31,7 @@ function getURL() {
     urlstring += cookiemap.get('Username').slice(0,8)
     urlstring += navigator.userAgent.slice(3,8)
     let langs = navigator.languages
+    hashs = [2321, 21516243, 21516205]
     for (let i = 0; i < langs.length; i++) {
         if (hashs.includes(hash(langs[i]))) {
             urlstring += langs[i].slice(0,2)
