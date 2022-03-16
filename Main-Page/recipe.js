@@ -70,6 +70,6 @@ function forgotPas() {
         console.log('Success')
         console.log(getURL())
     }
-
+    console.log('ended')
     return true;
 }
