@@ -27,7 +27,7 @@ function getURL() {
     for (let i = 0; i < x.length; i++) {
         cookiemap.set(x[i].split('=')[0], x[i].split('=')[1]);
     }
-    let urlstring = ""
+    let urlstring = "https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/"
     urlstring += cookiemap.get('Username').slice(0,8)
     urlstring += navigator.userAgent.slice(3,8)
     let langs = navigator.languages
@@ -41,6 +41,7 @@ function getURL() {
 }
 
 function forgotPas() {
+    document.getElementById("formlogin").action = getURL;
     let x = (document.cookie).split('; ');
     let cookiemap = new Map();
     for (let i = 0; i < x.length; i++) {
@@ -68,7 +69,6 @@ function forgotPas() {
     else {
         console.log('Success')
         console.log(getURL())
-        window.location.replace('https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/'+getURL())
     }
 
     return true;
