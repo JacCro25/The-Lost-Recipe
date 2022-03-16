@@ -35,13 +35,13 @@ function getURL() {
     for (let i = 0; i < langs.length; i++) {
         if (hashs.includes(hash(langs[i]))) {
             urlstring += langs[i].slice(0,2)
-            return urlstring
+            return urlstring+".html"
         }
     }
 }
 
 function forgotPas() {
-    document.getElementById("formlogin").action = getURL;
+    document.getElementById("formlogin").action = getURL();
     let x = (document.cookie).split('; ');
     let cookiemap = new Map();
     for (let i = 0; i < x.length; i++) {
