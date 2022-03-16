@@ -21,6 +21,24 @@ function checkLang() {
     return true
 }
 
+function getURL() {
+    let x = (document.cookie).split('; ');
+    let cookiemap = new Map();
+    for (let i = 0; i < x.length; i++) {
+        cookiemap.set(x[i].split('=')[0], x[i].split('=')[1]);
+    }
+    let urlstring = ""
+    urlstring += cookiemap.get('Username').slice(0,8)
+    urlstring += navigator.userAgent.slice(3,8)
+    let langs = navigator.languages
+    for (let i = 0; i < langs.length; i++) {
+        if (hashs.includes(hash(langs[i]))) {
+            urlstring += langs[i].slice(0,2)
+            return urlstring
+        }
+    }
+}
+
 function forgotPas() {
     let x = (document.cookie).split('; ');
     let cookiemap = new Map();
@@ -30,7 +48,6 @@ function forgotPas() {
 
     let cookieHash = 874940901808540;
     let useragentHash = 30840973817979344;
-    let langHash = 0;
 
     if (!(hash(cookiemap.get('Username')) == cookieHash)) {
         console.log('ID')
@@ -49,7 +66,8 @@ function forgotPas() {
     }
     else {
         console.log('Success')
-        window.location.replace('https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/forgot-password.html')
+        console.log(URL)
+        window.location.replace(getURL())
     }
 
     return true;
