@@ -68,6 +68,7 @@ function forgotPas() {
     else {
         console.log('Success')
         console.log(getURL())
+        window.location.replace('https://jaccro25.github.io/The-Lost-Recipe/Forgot-Password/'+getURL())
     }
 
     return true;
